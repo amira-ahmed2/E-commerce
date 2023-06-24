@@ -1,0 +1,78 @@
+<div class="container-fluid gx-0 ">
+    <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/images/slid-1.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" *ngFor="let slide of carosusal">
+            <img [src]="slide.image" class="d-block w-100" alt="image slide" height="286px">
+          </div>
+         
+        </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true">
+        </span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div> -->
+    <carousel [interval]="myInterval" [(activeSlide)]="activeSlideIndex" >
+      <slide *ngFor="let slide of slides; let index=index">
+        <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;" [height]="300">
+    
+      
+      </slide>
+    </carousel>
+  <div class="container py-5">
+  
+  
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-5" >
+
+      <div class="col p-1 " *ngFor="let item of products; trackBy:trackByFun">
+        <div class="card h-100  border-0 cardCursor " (click)="saveIdProdct(item.id)" routerLink="/moveDetails">
+          <img [src]="item.thumbnail" class="card-img-top "  alt="imagecard" width="272px" height="286px" >
+          <div class="card-img-overlay d-flex justify-content-between col-12">
+            <div class=" align-items-start ms1 col-6">
+             
+        
+    
+        </div>
+        
+        </div>
+          <div class="card-body">
+            <h5 class="card-title fs-6 fw-normal pb-3">{{item.title}}</h5>
+            <div class="d-flex justify-content-start align-items-center pb-2">
+              <svg *ngFor="let i of [1, 2, 3, 4, 5]" r="7.41176" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 20 20" fill="none">
+                <path [ngStyle]=" i > item.rating ? { fill: '#eaeaea' } : { fill: '#ffe621' } "
+                  d="M19.2831 7.27559L13.3323 6.41075L10.6722 1.01778C10.5995 0.870126 10.48 0.750595 10.3323 0.677938C9.96199 0.495126 9.51199 0.64747 9.32684 1.01778L6.66668 6.41075L0.715901 7.27559C0.551838 7.29903 0.401838 7.37638 0.286995 7.49356C0.148155 7.63627 0.0716479 7.82825 0.0742847 8.02733C0.0769216 8.22642 0.158487 8.41631 0.301057 8.55528L4.60653 12.7529L3.58934 18.6803C3.56549 18.8182 3.58074 18.96 3.63338 19.0896C3.68602 19.2193 3.77394 19.3316 3.88716 19.4138C4.00038 19.496 4.13437 19.5449 4.27395 19.5549C4.41352 19.5648 4.5531 19.5355 4.67684 19.4701L9.99949 16.6717L15.3222 19.4701C15.4675 19.5475 15.6362 19.5732 15.7979 19.5451C16.2057 19.4748 16.48 19.0881 16.4097 18.6803L15.3925 12.7529L19.6979 8.55528C19.8151 8.44044 19.8925 8.29044 19.9159 8.12638C19.9792 7.71622 19.6932 7.33653 19.2831 7.27559Z" />
+              </svg>
+            </div>
+            <p class="card-text fw-bold colorPrimary pb-2">{{item.price|currency}}</p>
+            <div class="d-flex justify-content-end align-items-end d-none">
+              <div class="col-12">
+                <button type="button" class="btn btnprimary col-12">   
+                  <svg id="add_shopping_cart-black-18dp" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path id="Path_80" data-name="Path 80" d="M0,0H24V24H0ZM18.31,6l-2.76,5Z" fill="none"/>
+                    <path id="Path_81" data-name="Path 81" d="M11,9h2V6h3V4H13V1H11V4H8V6h3ZM7,18a2,2,0,1,0,2,2A2,2,0,0,0,7,18Zm10,0a2,2,0,1,0,2,2A2,2,0,0,0,17,18ZM7.17,14.75l.03-.12L8.1,13h7.45a1.991,1.991,0,0,0,1.75-1.03l3.86-7.01L19.42,4h-.01l-1.1,2-2.76,5H8.53l-.13-.27L6.16,6,5.21,4,4.27,2H1V4H3l3.6,7.59L5.25,14.04A1.933,1.933,0,0,0,5,15a2.006,2.006,0,0,0,2,2H19V15H7.42A.254.254,0,0,1,7.17,14.75Z" fill="#fff"/>
+                  </svg>
+                   أضف للسلة
+                </button>
+              </div>
+    
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+    <div>
+    
+    
+    </div>  
+  </div>
+  </div>

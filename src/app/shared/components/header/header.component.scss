@@ -1,0 +1,65 @@
+$primary: #302ca2;
+$primaryAccent: #efeef8;
+$backGround: #f6f6f6;
+.bglight {
+  font-size: 16px !important;
+}
+.input-group.border,
+.bglight {
+  background-color: $primaryAccent;
+  border-radius: 10px;
+}
+.input-group.border {
+  border-color: $primaryAccent !important;
+  & input {
+    background-color: transparent;
+    box-shadow: none !important;
+    border-color: $primaryAccent !important;
+  }
+  & .form-control {
+    font-size: 12px;
+    font-weight: normal;
+  }
+}
+
+nav {
+  background-color: $primaryAccent;
+}
+
+.offcanvas {
+  --bs-offcanvas-width: min(55vw, 250px) !important;
+}
+.px5 {
+  padding-right: 2rem !important;
+  padding-left: 2rem !important;
+}
+
+select {
+  padding: 12px;
+  border: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  &:focus,
+  &:checked {
+    box-shadow: none !important;
+  }
+}
+
+// select option:checked {
+//     background-color: #d6d6d6 !important;
+// }
+
+li.active,
+a.active {
+  background-color: #e0dff1 !important;
+  font-weight: bold !important;
+}
+.notBorderButton:focus {
+  border: 0px none transparent !important;
+}
+.offcanvas-header button {
+  box-shadow: none !important;
+}
+.colorPrimary {
+  color: $primary !important;
+}

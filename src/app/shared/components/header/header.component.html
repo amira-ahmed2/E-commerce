@@ -1,0 +1,155 @@
+<div class="col-12">
+  <header class="col-12 d-flex bg-white py-3 px-5">
+    <div class="row gx-2 col-12 d-flex justify-content-between align-items-center">
+      <div class="d-lg-none col-2">
+        <button class="btn notBorderButton" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              fill="#302CA2" />
+          </svg>
+        </button>
+      </div>
+      <div class="col-lg-2 col-sm-4 col-4 nav-item pe-sm-0 pe-3">
+        <a class="nav-link col-12" aria-current="page" href="#">
+          <img src="assets/icons/logo.png" alt="logo" width="100" class=""></a>
+      </div>
+      <form class="col-lg-7   nav-item d-lg-block d-none">
+
+        <div class="input-group border rounded-3">
+          <button class="btn notBorderButton" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#302CA2" class="bi bi-search"
+              viewBox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>
+          </button>
+          <input class="form-control border-start border-0 rounded-3 colorPrimary" type="search" value="search"
+            id="example-search-input">
+          <span class="input-group-append">
+
+          </span>
+        </div>
+      </form>
+      <div class="col-sm-2 col-2 nav-item d-block d-lg-none " (click)="showSearch()">
+
+        <button class="btn notBorderButton bglight " type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#302CA2" class="bi bi-search"
+            viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg>
+        </button>
+      </div>
+      <div class="col-lg-1 col-sm-2 col-2 nav-item d-flex justify-content-center align-items-center">
+        <button type="button" class="btn border-0  bglight ">
+          <svg id="person-24px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path id="Path_4" data-name="Path 4" d="M0,0H24V24H0Z" fill="none" />
+            <path id="Path_5" data-name="Path 5"
+              d="M12,12A4,4,0,1,0,8,8,4,4,0,0,0,12,12Zm0,2c-2.67,0-8,1.34-8,4v1a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V18C20,15.34,14.67,14,12,14Z"
+              fill="#302ca2" />
+          </svg>
+
+        </button>
+      </div>
+
+      <div class="col-md-1 col-2 nav-item ">
+        <button type="button"
+          class="btn border-0  d-none bglight colorPrimary fw-normal d-flex col-md-10 col-12 py-2 d-md-flex justify-content-md-between justify-content-center align-items-center">
+          <span class="d-md-block d-none"> cart </span>
+          <svg id="shopping_cart-24px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path id="Path_2" data-name="Path 2" d="M0,0H24V24H0Z" fill="none" />
+            <path id="Path_3" data-name="Path 3"
+              d="M7,18a2,2,0,1,0,2,2A2,2,0,0,0,7,18ZM1,3A1,1,0,0,0,2,4H3l3.6,7.59L5.25,14.03A2,2,0,0,0,7,17H18a1,1,0,0,0,0-2H7l1.1-2h7.45a1.991,1.991,0,0,0,1.75-1.03l3.58-6.49A1,1,0,0,0,20.01,4H5.21L4.54,2.57A.993.993,0,0,0,3.64,2H2A1,1,0,0,0,1,3ZM17,18a2,2,0,1,0,2,2A2,2,0,0,0,17,18Z"
+              fill="#302ca2" />
+          </svg>
+
+
+        </button>
+        <button type="button" class="btn border-0  bglight d-block d-md-none">
+          <svg id="shopping_cart-24px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path id="Path_2" data-name="Path 2" d="M0,0H24V24H0Z" fill="none" />
+            <path id="Path_3" data-name="Path 3"
+              d="M7,18a2,2,0,1,0,2,2A2,2,0,0,0,7,18ZM1,3A1,1,0,0,0,2,4H3l3.6,7.59L5.25,14.03A2,2,0,0,0,7,17H18a1,1,0,0,0,0-2H7l1.1-2h7.45a1.991,1.991,0,0,0,1.75-1.03l3.58-6.49A1,1,0,0,0,20.01,4H5.21L4.54,2.57A.993.993,0,0,0,3.64,2H2A1,1,0,0,0,1,3ZM17,18a2,2,0,1,0,2,2A2,2,0,0,0,17,18Z"
+              fill="#302ca2" />
+          </svg>
+
+        </button>
+      </div>
+
+
+    </div>
+  </header>
+  <form class="col-12 d-lg-none shadow  " *ngIf="search">
+
+    <div class="input-group border rounded-0 bg-white">
+      <button class="btn notBorderButton" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#302CA2" class="bi bi-search"
+          viewBox="0 0 16 16">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </svg>
+      </button>
+      <input class="form-control border-start border-0 rounded-0" type="search" value=" search"
+        id="example-search-input">
+
+    </div>
+  </form>
+
+  <nav class="col-12 d-lg-flex px5 d-none ">
+    <div class="row gx-2 col-12 d-flex justify-content-between align-items-center">
+      <ul class="nav me-auto mb-2 mb-lg-0  d-flex flex-row justify-content-start align-items-center colorPrimary">
+        <li class="nav-item  ">
+          <select class="form-select py-0" aria-label="Default select example"  #categoryData (change)="showProductByCategory($event, categoryData?.value)">
+
+            <option selected class="colorPrimary"> category </option>
+            <option [value]=item *ngFor="let item of category">{{item}}    </option>
+          </select>
+        </li>
+        <li class="nav-item" routerLink="home" routerLinkActive="active">
+          <a class="nav-link colorPrimary" aria-current="page">Home</a>
+        </li>
+        <!-- <li class="nav-item" routerLink="fivo" routerLinkActive="active">
+          <a class="nav-link colorPrimary">قائمة الأمنيات</a>
+        </li> -->
+        <li class="nav-item" routerLink="conect" routerLinkActive="active">
+          <a class="nav-link colorPrimary"> Contact Us</a>
+        </li>
+        <li class="nav-item" routerLink="howUs" routerLinkActive="active">
+          <a class="nav-link colorPrimary"> About Us</a>
+        </li>
+
+
+      </ul>
+    </div>
+  </nav>
+
+</div>
+
+
+<div class="offcanvas offcanvas-end py-1 " data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+  aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header ">
+    <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body p-0">
+    <div class="nav flex-column">
+      <a class="nav-link colorPrimary" aria-current="page" routerLink="home" routerLinkActive="active">Home</a>
+      <select class="form-select colorPrimary" aria-label="Default select example"
+       #categoryData (change)="showProductByCategory($event, categoryData?.value)">
+        <option selected disabled class="colorPrimary">  category  </option>
+        <option  [value]="item" *ngFor="let item of category" >
+          {{item}}
+        </option>
+      
+      </select>
+      <!-- <a class="nav-link colorPrimary" routerLink="fivo" routerLinkActive="active">قائمة الأمنيات</a> -->
+
+      <a class="nav-link colorPrimary "  > Contact Us</a>
+      <a class="nav-link colorPrimary"  >About Us</a>
+    </div>
+  </div>
+</div>
+<!-- <button class="nav-link colorPrimary btn-link btn"  (click)="showProByCatg('sss')" type="button"> Contact Us</button> -->
