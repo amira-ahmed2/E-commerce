@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MoviesService } from 'src/app/core/services/movies/movies.service';
+import { ProductsService } from 'src/app/core/services/products/products.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +11,7 @@ export class HeaderComponent {
   navToggler:boolean;
   category!:any[];
 
-    constructor(private apiPro:MoviesService) {
+    constructor(private apiPro:ProductsService) {
       this.search=false;
       this.navToggler=true;
      }

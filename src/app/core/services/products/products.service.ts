@@ -6,8 +6,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class MoviesService {
+export class ProductsService {
 
+ 
   constructor(private http: HttpClient) { }
     
   getAllMovies():Observable<any>{
@@ -27,3 +28,5 @@ export class MoviesService {
     );
 }
 }
+
+

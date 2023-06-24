@@ -8,7 +8,7 @@ const routes: Routes = [
   {path:'',component:MainLayoutComponent,children:[
     {path:'',redirectTo:'home', pathMatch:"full"},
     {path:'home',component : HomeComponent},
-    {path:'moveDetails',component : ProductDetailsComponent},
+    {path:'proDetails',component : ProductDetailsComponent},
   ]}
  
 ];

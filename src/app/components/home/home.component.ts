@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs';
-import { MoviesService } from 'src/app/core/services/movies/movies.service';
+import { ProductsService } from 'src/app/core/services/products/products.service';
 import { Iproduct } from 'src/app/models/iproduct';
 @Component({
   selector: 'app-home',
@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit{
   product!:any[];
 
  
-constructor(private movies: MoviesService) {}
+constructor(private prods: ProductsService) {}
 
   ngOnInit(): void {
 
@@ -31,7 +31,7 @@ constructor(private movies: MoviesService) {}
   }
 showAllMoves(){
   
-  this.movies.getAllMovies().pipe(first()).subscribe((data) => {
+  this.prods.getAllMovies().pipe(first()).subscribe((data) => {
     this.products=data.products
     
   });
