@@ -93,7 +93,7 @@
         </svg>
       </button>
       <input class="form-control border-start border-0 rounded-0" type="search" value=" search"
-        id="example-search-input">
+        id="example-search-input"/>
 
     </div>
   </form>
@@ -108,16 +108,14 @@
             <option [value]=item *ngFor="let item of category">{{item}}    </option>
           </select>
         </li>
-        <li class="nav-item" routerLink="home" routerLinkActive="active">
-          <a class="nav-link colorPrimary" aria-current="page">Home</a>
+        <li class="nav-item click-title" routerLink="home" routerLinkActive="active">
+          <a class="nav-link colorPrimary " aria-current="page">Home</a>
         </li>
-        <!-- <li class="nav-item" routerLink="fivo" routerLinkActive="active">
-          <a class="nav-link colorPrimary">قائمة الأمنيات</a>
-        </li> -->
-        <li class="nav-item" routerLink="conect" routerLinkActive="active">
+        
+        <li class="nav-item click-title" routerLink="conect" routerLinkActive="active">
           <a class="nav-link colorPrimary"> Contact Us</a>
         </li>
-        <li class="nav-item" routerLink="howUs" routerLinkActive="active">
+        <li class="nav-item click-title" routerLink="howUs" routerLinkActive="active">
           <a class="nav-link colorPrimary"> About Us</a>
         </li>
 

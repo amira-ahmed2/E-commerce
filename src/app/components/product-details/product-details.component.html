@@ -1,1 +1,21 @@
-<p>product-details works!</p>
+<section class="container-fluid py-4">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-3 overflow-scroll-y">
+                    <ng-container *ngFor="let item of singleProduct?.images;">
+                        <img [src]="item" alt="itemimage" class="img-fluid click-img mb-3" (click)="changeThumbnail(item)" width="auto" height="286px">
+
+                    </ng-container>
+                </div>
+                <div class="col-lg-9">
+                    <img [src]="singleProductThumbnail" alt="thumbnail" class="w-100 h-100 img-fluid">
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col-lg-6"></div>
+
+    </div>
+</section>

@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
     BrowserAnimationsModule,
     SharedModule,
     CarouselModule.forRoot(),
-    
+    MatPaginatorModule
   ],
   exports:[SharedModule],
   providers: [],

@@ -11,8 +11,12 @@ export class ProductsService {
  
   constructor(private http: HttpClient) { }
     
-  getAllMovies():Observable<any>{
+  getAllproducts():Observable<any>{
     return this.http.get<any>(`${environment.apiUrl}products/`)
+  }
+
+  getSingleProd(id:number):Observable<any>{
+    return this.http.get<any>(`${environment.apiUrl}products/${id}`)
   }
 
   getCategory():Observable<any>{

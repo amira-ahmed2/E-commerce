@@ -1,24 +1,4 @@
 <div class="container-fluid gx-0 ">
-    <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="assets/images/slid-1.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item" *ngFor="let slide of carosusal">
-            <img [src]="slide.image" class="d-block w-100" alt="image slide" height="286px">
-          </div>
-         
-        </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true">
-        </span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div> -->
     <carousel [interval]="myInterval" [(activeSlide)]="activeSlideIndex" >
       <slide *ngFor="let slide of slides; let index=index">
         <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;" [height]="300">
@@ -31,8 +11,8 @@
   
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-5" >
 
-      <div class="col p-1 " *ngFor="let item of products; trackBy:trackByFun">
-        <div class="card h-100  border-0 cardCursor " (click)="saveIdProdct(item.id)" routerLink="/moveDetails">
+      <div class="col p-1 " *ngFor="let item of products |slice:((paginator.pageIndex)*paginator.pageSize):((paginator.pageIndex+1)*paginator.pageSize)">
+        <div class="card h-100  border-0 cardCursor " (click)="saveIdProdct(item.id)" routerLink="/proDetails">
           <img [src]="item.thumbnail" class="card-img-top "  alt="imagecard" width="272px" height="286px" >
           <div class="card-img-overlay d-flex justify-content-between col-12">
             <div class=" align-items-start ms1 col-6">
@@ -70,6 +50,12 @@
       </div>
      
     </div>
+ 
+    <mat-paginator #paginator [length]="length"
+              [pageSize]="pageSize"
+              (page)="pageEvent = $event"
+              [hidePageSize]="true">
+</mat-paginator>
     <div>
     
     
